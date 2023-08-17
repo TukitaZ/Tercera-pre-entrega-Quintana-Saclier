@@ -1,0 +1,32 @@
+{% extends 'aplicacion/base.html' %}
+{% load static %}
+
+{% block titulo %}
+    <p class="lead">Materias</p>
+{% endblock titulo %}
+    
+
+{% block contenido %}
+    <h2>Materias</h2>
+
+    <table class="table table-striped">
+        <thead>
+             <tr>
+                <th>ID</th>
+                <th>Materia</th>
+                <th>Comision</th>
+             </tr>
+        </thead>
+        <tbody>
+    {% for m in materias %}
+            <tr>
+                <td>{{ m.id }}</td>
+                <td>{{ m.nombre }}</td>
+                <td>{{ m.comision }}</td>
+            </tr>
+    {% endfor %}
+    </tbody>
+    </table>
+    
+        
+{% endblock contenido %}

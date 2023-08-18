@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import Materia
+from .models import *
 
 # Create your views here.
 def home(request):
@@ -10,7 +10,9 @@ def materias(request):
     return render(request, 'aplicacion/materias.html', contexto)
 
 def maestros(request):
-    return render(request, 'aplicacion/maestros.html')
+    contexto = {'maestros': Maestro.objects.all()}
+    return render(request, 'aplicacion/maestros.html', contexto)
 
 def alumnos(request):
-    return render(request, 'aplicacion/alumnos.html')
+    contexto = {'alumnos': Alumno.objects.all()}
+    return render(request, 'aplicacion/alumnos.html', contexto)

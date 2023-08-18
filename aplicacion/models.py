@@ -13,6 +13,7 @@ class Alumno(models.Model):
     apellido = models.CharField(max_length=50)
     documento = models.IntegerField()
     email = models.EmailField()
+    comision = models.ManyToManyField(Materia)
 
     def __str__(self):
         return f'{self.apellido}, {self.nombre}'
@@ -22,7 +23,7 @@ class Maestro(models.Model):
     apellido = models.CharField(max_length=50)
     documento = models.IntegerField()
     email = models.EmailField()
-    profesion = models.CharField(max_length=50)
+    profesion = models.ManyToManyField(Materia)
 
     def __str__(self):
         return f'{self.apellido}, {self.nombre}'

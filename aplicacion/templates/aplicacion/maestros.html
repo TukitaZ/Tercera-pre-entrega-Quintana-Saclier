@@ -7,5 +7,32 @@
     
 
 {% block contenido %}
-    <h2>Maestros</h2>
+    <br>
+    <h2><i>Listado de Maestros</i></h2>
+    <br>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Materia que enseña</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for m in maestros %}
+                <tr>
+                    <td>{{ m.nombre }}</td>
+                    <td>{{ m.apellido }}</td>
+                    <td>
+                        {% for materia in m.profesion.all %}
+                            {{ materia.nombre }}
+                            {% if not forloop.last %}, {% endif %}
+                        {% endfor %}
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+     
+        
 {% endblock contenido %}

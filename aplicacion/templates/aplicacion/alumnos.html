@@ -7,5 +7,32 @@
     
 
 {% block contenido %}
-    <h2>Alumnos</h2>
+    <br>
+    <h2><i>Listado de Alumnos</i></h2>
+    <br>
+    <table class="table table-striped">
+        <thead>
+             <tr>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Comision que cursa</th>
+             </tr>
+        </thead>
+        <tbody>
+            {% for a in alumnos %}
+            <tr>
+                <td>{{ a.nombre }}</td>
+                <td>{{ a.apellido }}</td>
+                <td>
+                    {% for materia in a.comision.all %}
+                        {{ materia.comision }}
+                        {% if not forloop.last %}, {% endif %}
+                    {% endfor %}
+                </td>
+            </tr>
+        {% endfor %}
+    </tbody>
+    </table>
+    
+        
 {% endblock contenido %}

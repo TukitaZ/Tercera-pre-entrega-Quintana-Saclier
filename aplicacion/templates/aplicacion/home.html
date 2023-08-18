@@ -7,7 +7,7 @@
         <meta name="description" content="" />
         <meta name="author" content="" />
         <title>Colegio San Martin</title>
-        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <link rel="icon" type="image/x-icon" href="{% static 'aplicacion/assets/favicon.ico' %}" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="{% static 'aplicacion/css/styles.css' %}" rel="stylesheet" />
     </head>
@@ -23,7 +23,6 @@
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item"><a class="nav-link" href="#about">Nosotros</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#services">Servicio</a></li>
                         <li class="nav-item"><a class="nav-link" href="#contact">Contacto</a></li>
                     </ul>
                 </div>
@@ -32,7 +31,7 @@
         <!-- Header-->
         <header class="bg-primary bg-gradient text-white">
             <div class="container px-4 text-center">
-                <h1 class="fw-bolder">Colegio San Martin</h1>
+                <h1 class="fw-bolder"><i>Colegio San Martin</i></h1>
                 <p class="lead">La mejor educacion desde 1957</p>
             </div>
         </header>
@@ -43,24 +42,7 @@
                 <div class="row gx-4 justify-content-center">
                     <div class="col-lg-8">
                         <h2>Sobre nosotros</h2>
-                        <p class="lead">This is a great place to talk about your webpage. This template is purposefully unstyled so you can use it as a boilerplate or starting point for you own landing page designs! This template features:</p>
-                        <ul>
-                            <li>Clickable nav links that smooth scroll to page sections</li>
-                            <li>Responsive behavior when clicking nav links perfect for a one page website</li>
-                            <li>Bootstrap's scrollspy feature which highlights which section of the page you're on in the navbar</li>
-                            <li>Minimal custom CSS so you are free to explore your own unique design options</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- Services section-->
-        <section class="bg-light" id="services">
-            <div class="container px-4">
-                <div class="row gx-4 justify-content-center">
-                    <div class="col-lg-8">
-                        <h2>Servicio que ofrecemos</h2>
-                        <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut optio velit inventore, expedita quo laboriosam possimus ea consequatur vitae, doloribus consequuntur ex. Nemo assumenda laborum vel, labore ut velit dignissimos.</p>
+                        <p class="lead">La educación marca el futuro de los pueblos. Nuestros especialistas en tecnología y excelentes comunicadores, son los encargados de orientar a los conductores del mañana. Nuestro proyecto apunta a formar al educando con amor, orientándolo en la búsqueda del camino que lo conduzca a la libertad y a la felicidad.</p>
                     </div>
                 </div>
             </div>
@@ -70,8 +52,8 @@
             <div class="container px-4">
                 <div class="row gx-4 justify-content-center">
                     <div class="col-lg-8">
-                        <h2>Contactanos</h2>
-                        <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero odio fugiat voluptatem dolor, provident officiis, id iusto! Obcaecati incidunt, qui nihil beatae magnam et repudiandae ipsa exercitationem, in, quo totam.</p>
+                        <h2>Contacto</h2>
+                        <p class="lead">Telefono: 4123-0123<br>Email: sm@gmail.com<br>Direccion: Calle 123, Localidad, Buenos Aires.</p>
                     </div>
                 </div>
             </div>
@@ -83,6 +65,6 @@
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
-        <script src="{% static 'js/scripts.js' %}"></script>
+        <script src="{% static '/aplicacion/js/scripts.js' %}"></script>
     </body>
 </html>

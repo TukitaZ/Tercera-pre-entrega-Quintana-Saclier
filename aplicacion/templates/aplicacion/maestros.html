@@ -1,6 +1,11 @@
 {% extends 'aplicacion/base.html' %}
 {% load static %}
 
+{% block barra %}
+    <li class="nav-item"><a class="nav-link" href="{% url 'FormMaestro' %}">Agregar Maestro</a></li>
+    <li class="nav-item"><a class="nav-link" href="{% url 'buscar_maestro' %}">Buscar Maestro</a></li>
+{% endblock barra %}
+
 {% block titulo %}
     <p class="lead">Maestros</p>
 {% endblock titulo %}

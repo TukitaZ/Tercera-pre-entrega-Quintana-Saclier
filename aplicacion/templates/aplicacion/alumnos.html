@@ -1,6 +1,11 @@
 {% extends 'aplicacion/base.html' %}
 {% load static %}
 
+{% block barra %}
+    <li class="nav-item"><a class="nav-link" href="{% url 'FormAlumno' %}">Agregar Alumno</a></li>
+    <li class="nav-item"><a class="nav-link" href="{% url 'buscar_alumno' %}">Buscar Alumno</a></li>
+{% endblock barra %}
+
 {% block titulo %}
     <p class="lead">Alumnos</p>
 {% endblock titulo %}

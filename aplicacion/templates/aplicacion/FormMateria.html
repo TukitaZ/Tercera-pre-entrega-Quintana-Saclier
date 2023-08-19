@@ -1,0 +1,21 @@
+{% extends 'aplicacion/base.html' %}
+{% load static %}
+
+{% block barra %}
+    <li class="nav-item"><a class="nav-link" href="{% url 'materias' %}">Atras</a></li>
+{% endblock barra %}
+
+{% block titulo %}
+    <p class="lead">Materias</p>
+{% endblock titulo %}
+
+{% block contenido %}
+    <h2>Agregar una materia</h2>
+    <form action="" method="post">
+        {% csrf_token %}
+        <table>
+            {{ form.as_table }}
+        </table>
+        <input type="submit" value="Enviar"> 
+    </form>
+{% endblock contenido %}
